@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Victoria Workplace Fatalities 2018-2022",
+  "title": "Central Victoria Workplace Fatalities",
   "width": 800,
   "height": 400,
   "projection": {"type": "equirectangular"},
   "data": {
-    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/map/js/vic_lga.json",
+    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/map/js/vic_lga_cbd.json",
     "format": {"type": "topojson", "feature": "vic_lga"}
   },
   "transform": [

@@ -14,16 +14,20 @@
 <body>
     <h1>Local Government Areas (LGA)</h1>
     
-    <p>paragraph</p>
-    <a href="SOMELINK"> Text to be viewed</a>
+    <!-- <p>paragraph</p>
+    <a href="SOMELINK"> Text to be viewed</a> -->
 
     <div id="lga_map"></div>
+    <div id="central_lga_map"></div>
 
     <script type="text/javascript">
 
-    var spec2 = "map/js/lga_map.vl.json";
-    vegaEmbed('#lga_map', spec2).then(function(result) {
+    var spec1 = "map/js/lga_map.vl.json";
+    vegaEmbed('#lga_map', spec1).then(function(result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    var spec2 = "map/js/central_lga_map.vl.json";
+    vegaEmbed('#central_lga_map', spec2).then(function(result) {
     }).catch(console.error);
     </script>
 </body>
