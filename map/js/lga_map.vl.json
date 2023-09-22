@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Victoria Workplace Fatalities 2018-2022",
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "equirectangular"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/map/js/vic_lga.json",
+    "format": {"type": "topojson", "feature": "vic_lga"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.vic_lga__2",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_LGA.csv"
+        },
+        "key": "Local Government Areas (LGA)",
+        "fields": ["Total"]
+      }
+    },
+    {"calculate": "datum.Total + 0.1", "as": "Total Fatalities"}
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Total Fatalities",
+      "type": "quantitative",
+      "scale": {"type": "log"}
+    },
+    "tooltip": [
+      {
+        "field": "properties.vic_lga__2",
+        "type": "nominal",
+        "title": "Local Government Areas (LGA)"
+      },
+      {"field": "Total", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}
