@@ -55,5 +55,9 @@
       "title": "Total Fatalities in LGA"}
     ]
   },
-  "config": {}
+  "config": {
+    "legend": {
+      "disable": true
+    }
+  }
 }
