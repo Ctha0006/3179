@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Age Groups and Gender",
+  "description": "Age Groups and Gender",
   "width": 600,
   "height": 400,
   "data": {
