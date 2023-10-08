@@ -3,7 +3,22 @@
   "title": "Victoria Workplace Fatalities 2018-2022",
   "width": 800,
   "height": 400,
-  "projection": {"type": "equirectangular"},
+  "params": [{
+    "name": "zoom_level",
+    "value": 10000,
+    "bind": {
+      "input": "range",
+      "min": 3500,
+      "max": 60000,
+      "step": 100,
+      "name": "Zoom: "
+    }
+  }],
+  "projection": {
+    "type": "equirectangular", 
+    "center": [145, -37.85],
+    "scale": {"expr": "zoom_level"}
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/map/js/vic_lga.json",
     "format": {"type": "topojson", "feature": "vic_lga"}
