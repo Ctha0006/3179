@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Age Groups and Gender",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_age_gender.csv"
+  },
+  "params": [
+    {
+      "name": "gender_fltr",
+      "bind": {
+        "input": "select",
+        "options": [null, "Female", "Male"],
+        "labels": ["Show All"],
+        "name": "Gender Filter:"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "transform": [
+        {"filter": " gender_fltr == null || datum.Gender == gender_fltr"}
+      ],
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Age", "type": "ordinal", "title": "Age Groups"},
+        "y": {
+          "aggregate": "sum",
+          "field": "Total",
+          "type": "quantitative",
+          "title": "Total Fatalities"
+        },
+        "color": {
+          "field": "Gender",
+          "type": "nominal",
+          "scale": {"domain": ["Female", "Male"], "range": ["#FF7900", "#7B2CBF"]},
+          "title": "Gender"
+        },
+        "tooltip": [
+          {"field": "Gender", "type": "nominal", "title": "Gender"},
+          {"field": "Age", "type": "ordinal", "title": "Age"},
+          {"field": "Total", "type": "quantitative", "title": "Fatalities"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -10,
+        "opacity": 0.9,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {"field": "Age"},
+        "y": {"aggregate": "sum", "field": "Total"},
+        "text": {
+          "aggregate": "sum", "field": "Total",
+          "title": "Total"
+        }
+      }
+    }
+  ],
+  "config": {}
+}
