@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_month_year.csv"
+  },
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 240,
+      "layer": [
+        {
+          "mark": {"type": "bar", "color": "#fbcb5c"},
+          "encoding": {
+            "x": {
+              "timeUnit": "yearmonth",
+              "field": "Date",
+              "type": "temporal",
+              "scale": {"domain": {"param": "brush"}},
+              "axis": {"title": "Month Year", "tickCount": 10}
+            },
+            "y": {"field": "TotalFatalities", "type": "quantitative", "title": "Total Fatalities"},
+            "tooltip": [
+              {
+                "field": "Date", 
+                "timeUnit": "yearmonth", 
+                "title": "Date"
+              },
+              {
+                "field": "TotalFatalities",
+                "type": "quantitative",
+                "title": "Fatalities"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dx": -195,
+            "dy": -100,
+            "baseline": "middle"          },
+          "transform": [
+            {
+              "calculate": "'Dec 2018 and Jan 2021; had no recorded fatalities'",
+              "as": "text_annotation_raw"
+            },
+            {
+              "calculate": "split(datum.text_annotation_raw, ';')",
+              "as": "text_annotation"
+            }
+          ],
+          "encoding": {
+            "text": {"field": "text_annotation"}
+          }
+        }
+      ]
+    },
+    {
+      "width": "container",
+      "height": 150,
+      "mark": {"type": "bar", "color": "#FFBA08"},
+      "params": [
+        {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {"timeUnit": "year", "field": "Date", "type": "temporal", "axis": {"title": "Year", "tickCount": 10}},
+        "y": {
+          "aggregate": "sum",
+          "field": "TotalFatalities",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false},
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "Date", 
+            "timeUnit": "year", 
+            "title": "Year"
+          },
+          {
+            "aggregate": "sum",
+            "field": "TotalFatalities",
+            "type": "quantitative",
+            "title": "Fatalities"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

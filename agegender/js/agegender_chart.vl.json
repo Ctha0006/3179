@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Age Groups and Gender",
-  "width": 600,
-  "height": 400,
+  "width": "container",
+  "height": 200,
   "data": {
     "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_age_gender.csv"
   },
@@ -34,8 +34,11 @@
         "color": {
           "field": "Gender",
           "type": "nominal",
-          "scale": {"domain": ["Female", "Male"], "range": ["#FF7900", "#7B2CBF"]},
-          "title": "Gender"
+          "scale": {"domain": ["Female", "Male"], "range": ["#fbcb5c", "#D00000"]},
+          "title": "Gender",
+          "legend": {
+            "orient": "top-right"
+          }
         },
         "tooltip": [
           {"field": "Gender", "type": "nominal", "title": "Gender"},
@@ -45,6 +48,9 @@
       }
     },
     {
+      "transform": [
+        {"filter": " gender_fltr == null || datum.Gender == gender_fltr"}
+      ],
       "mark": {
         "type": "text",
         "dy": -10,
