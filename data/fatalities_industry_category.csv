@@ -1,91 +1,451 @@
-Industry,Work-Related Fatality Category,2018,2019,2020,2021,2022
-"Agriculture, Forestry and Fishing",Medical Complications,0,0,0,1,0
-"Agriculture, Forestry and Fishing",Medical incl Heart/Stroke,0,1,0,0,0
-"Agriculture, Forestry and Fishing",Other,0,0,1,0,0
-"Agriculture, Forestry and Fishing",Transport Accident,0,1,0,0,1
-"Agriculture, Forestry and Fishing",Traumatic Injury/Event,6,7,8,8,7
-Mining,Lung Disease,0,0,0,1,0
-Mining,Transport Accident,0,0,0,0,2
-Manufacturing,Disease,0,0,1,0,1
-Manufacturing,Lung Disease,0,2,4,6,1
-Manufacturing,Medical Complications,1,1,1,1,1
-Manufacturing,Medical incl Heart/Stroke,0,3,1,1,1
-Manufacturing,Suicide,1,0,0,0,1
-Manufacturing,Transport Accident,1,3,1,0,0
-Manufacturing,Traumatic Injury/Event,3,2,4,7,3
-"Electricity, Gas, Water and Waste Services",Disease,0,0,1,0,0
-"Electricity, Gas, Water and Waste Services",Lung Disease,0,0,0,0,1
-"Electricity, Gas, Water and Waste Services",Transport Accident,0,1,1,0,1
-"Electricity, Gas, Water and Waste Services",Traumatic Injury/Event,1,2,0,0,0
-Construction,Disease,0,0,0,0,2
-Construction,Lung Disease,2,3,0,4,1
-Construction,Medical Complications,0,0,0,3,0
-Construction,Medical incl Heart/Stroke,0,1,1,1,1
-Construction,Suicide,0,0,1,0,0
-Construction,Transport Accident,3,3,2,1,0
-Construction,Traumatic Injury/Event,9,5,8,7,5
-Wholesale Trade,Asphyxia,1,0,0,0,0
-Wholesale Trade,Disease,0,0,1,0,0
-Wholesale Trade,Lung Disease,0,1,0,1,0
-Wholesale Trade,Medical Complications,0,1,0,0,0
-Wholesale Trade,Medical incl Heart/Stroke,1,0,0,0,1
-Wholesale Trade,Suicide,0,1,0,0,0
-Wholesale Trade,Transport Accident,0,2,1,0,0
-Wholesale Trade,Traumatic Injury/Event,2,2,2,2,1
-Retail Trade,Medical Complications,0,1,0,0,1
-Retail Trade,Other,0,0,1,0,0
-Retail Trade,Suicide,0,1,0,0,0
-Retail Trade,Transport Accident,0,0,1,0,1
-Retail Trade,Traumatic Injury/Event,0,2,1,1,1
-Accommodation and Food Services,Criminal Offence,1,0,0,0,0
-Accommodation and Food Services,Suicide,1,0,0,1,0
-Accommodation and Food Services,Transport Accident,0,0,0,0,1
-Accommodation and Food Services,Traumatic Injury/Event,0,0,0,1,0
-"Transport, Postal and Warehousing",Disease,1,0,0,0,1
-"Transport, Postal and Warehousing",Lung Disease,0,0,0,0,1
-"Transport, Postal and Warehousing",Medical Complications,0,1,0,1,1
-"Transport, Postal and Warehousing",Medical incl Heart/Stroke,0,1,2,1,0
-"Transport, Postal and Warehousing",Other,0,0,0,1,0
-"Transport, Postal and Warehousing",Suicide,0,1,0,0,0
-"Transport, Postal and Warehousing",Transport Accident,3,7,9,3,7
-"Transport, Postal and Warehousing",Traumatic Injury/Event,1,0,2,4,5
-Information Media and Telecommunications,Medical Complications,0,1,0,0,0
-Information Media and Telecommunications,Traumatic Injury/Event,1,0,0,0,0
-Information Media and Telecommunications,Subtotal,1,1,0,0,0
-"Rental, Hiring and Real Estate Services",Suicide,1,0,0,0,0
-"Rental, Hiring and Real Estate Services",Traumatic Injury/Event,0,0,0,1,0
-"Professional, Scientific and Technical Services",Asphyxia,0,1,0,0,0
-"Professional, Scientific and Technical Services",Medical Complications,0,1,0,0,0
-"Professional, Scientific and Technical Services",Transport Accident,0,0,0,1,0
-"Professional, Scientific and Technical Services",Traumatic Injury/Event,0,0,2,0,0
-Administrative and Support Services,Lung Disease,0,0,0,2,0
-Administrative and Support Services,Medical incl Heart/Stroke,0,0,1,0,0
-Administrative and Support Services,Suicide,0,0,0,1,0
-Administrative and Support Services,Transport Accident,0,0,0,0,1
-Administrative and Support Services,Traumatic Injury/Event,0,2,1,2,0
-Public Administration and Safety,Disease,2,4,4,4,4
-Public Administration and Safety,Lung Disease,0,1,4,1,1
-Public Administration and Safety,Medical Complications,0,0,1,2,0
-Public Administration and Safety,Medical incl Heart/Stroke,1,0,0,1,0
-Public Administration and Safety,Other,0,0,0,1,0
-Public Administration and Safety,Suicide,2,1,0,0,1
-Public Administration and Safety,Transport Accident,0,0,5,0,1
-Public Administration and Safety,Traumatic Injury/Event,1,2,2,2,1
-Education and Training,Lung Disease,0,0,1,0,0
-Education and Training,Suicide,1,0,2,0,0
-Education and Training,Transport Accident,0,0,1,0,0
-Education and Training,Traumatic Injury/Event,2,0,1,0,1
-Health Care and Social Assistance,Medical incl Heart/Stroke,0,1,0,1,0
-Health Care and Social Assistance,Other,0,0,0,0,1
-Health Care and Social Assistance,Suicide,1,2,0,1,0
-Health Care and Social Assistance,Transport Accident,0,0,0,0,2
-Health Care and Social Assistance,Traumatic Injury/Event,0,0,0,0,1
-Health Care and Social Assistance,Subtotal,1,3,0,2,4
-Arts and Recreation Services,Lung Disease,1,0,0,0,0
-Arts and Recreation Services,Transport Accident,0,1,0,0,0
-Arts and Recreation Services,Traumatic Injury/Event,0,2,1,0,0
-Other Services,Lung Disease,0,0,0,1,1
-Other Services,Medical Complications,0,1,0,0,0
-Other Services,Suicide,0,1,0,0,0
-Other Services,Transport Accident,2,2,0,1,0
-Other Services,Traumatic Injury/Event,0,1,0,2,1
+Industry,Work-Related Fatality Category,Year,Fatalities
+"Agriculture, Forestry and Fishing",Medical Complications,2018,0
+"Agriculture, Forestry and Fishing",Medical incl Heart/Stroke,2018,0
+"Agriculture, Forestry and Fishing",Other,2018,0
+"Agriculture, Forestry and Fishing",Transport Accident,2018,0
+"Agriculture, Forestry and Fishing",Traumatic Injury/Event,2018,6
+Mining,Lung Disease,2018,0
+Mining,Transport Accident,2018,0
+Manufacturing,Disease,2018,0
+Manufacturing,Lung Disease,2018,0
+Manufacturing,Medical Complications,2018,1
+Manufacturing,Medical incl Heart/Stroke,2018,0
+Manufacturing,Suicide,2018,1
+Manufacturing,Transport Accident,2018,1
+Manufacturing,Traumatic Injury/Event,2018,3
+"Electricity, Gas, Water and Waste Services",Disease,2018,0
+"Electricity, Gas, Water and Waste Services",Lung Disease,2018,0
+"Electricity, Gas, Water and Waste Services",Transport Accident,2018,0
+"Electricity, Gas, Water and Waste Services",Traumatic Injury/Event,2018,1
+Construction,Disease,2018,0
+Construction,Lung Disease,2018,2
+Construction,Medical Complications,2018,0
+Construction,Medical incl Heart/Stroke,2018,0
+Construction,Suicide,2018,0
+Construction,Transport Accident,2018,3
+Construction,Traumatic Injury/Event,2018,9
+Wholesale Trade,Asphyxia,2018,1
+Wholesale Trade,Disease,2018,0
+Wholesale Trade,Lung Disease,2018,0
+Wholesale Trade,Medical Complications,2018,0
+Wholesale Trade,Medical incl Heart/Stroke,2018,1
+Wholesale Trade,Suicide,2018,0
+Wholesale Trade,Transport Accident,2018,0
+Wholesale Trade,Traumatic Injury/Event,2018,2
+Retail Trade,Medical Complications,2018,0
+Retail Trade,Other,2018,0
+Retail Trade,Suicide,2018,0
+Retail Trade,Transport Accident,2018,0
+Retail Trade,Traumatic Injury/Event,2018,0
+Accommodation and Food Services,Criminal Offence,2018,1
+Accommodation and Food Services,Suicide,2018,1
+Accommodation and Food Services,Transport Accident,2018,0
+Accommodation and Food Services,Traumatic Injury/Event,2018,0
+"Transport, Postal and Warehousing",Disease,2018,1
+"Transport, Postal and Warehousing",Lung Disease,2018,0
+"Transport, Postal and Warehousing",Medical Complications,2018,0
+"Transport, Postal and Warehousing",Medical incl Heart/Stroke,2018,0
+"Transport, Postal and Warehousing",Other,2018,0
+"Transport, Postal and Warehousing",Suicide,2018,0
+"Transport, Postal and Warehousing",Transport Accident,2018,3
+"Transport, Postal and Warehousing",Traumatic Injury/Event,2018,1
+Information Media and Telecommunications,Medical Complications,2018,0
+Information Media and Telecommunications,Traumatic Injury/Event,2018,1
+Information Media and Telecommunications,Subtotal,2018,1
+"Rental, Hiring and Real Estate Services",Suicide,2018,1
+"Rental, Hiring and Real Estate Services",Traumatic Injury/Event,2018,0
+"Professional, Scientific and Technical Services",Asphyxia,2018,0
+"Professional, Scientific and Technical Services",Medical Complications,2018,0
+"Professional, Scientific and Technical Services",Transport Accident,2018,0
+"Professional, Scientific and Technical Services",Traumatic Injury/Event,2018,0
+Administrative and Support Services,Lung Disease,2018,0
+Administrative and Support Services,Medical incl Heart/Stroke,2018,0
+Administrative and Support Services,Suicide,2018,0
+Administrative and Support Services,Transport Accident,2018,0
+Administrative and Support Services,Traumatic Injury/Event,2018,0
+Public Administration and Safety,Disease,2018,2
+Public Administration and Safety,Lung Disease,2018,0
+Public Administration and Safety,Medical Complications,2018,0
+Public Administration and Safety,Medical incl Heart/Stroke,2018,1
+Public Administration and Safety,Other,2018,0
+Public Administration and Safety,Suicide,2018,2
+Public Administration and Safety,Transport Accident,2018,0
+Public Administration and Safety,Traumatic Injury/Event,2018,1
+Education and Training,Lung Disease,2018,0
+Education and Training,Suicide,2018,1
+Education and Training,Transport Accident,2018,0
+Education and Training,Traumatic Injury/Event,2018,2
+Health Care and Social Assistance,Medical incl Heart/Stroke,2018,0
+Health Care and Social Assistance,Other,2018,0
+Health Care and Social Assistance,Suicide,2018,1
+Health Care and Social Assistance,Transport Accident,2018,0
+Health Care and Social Assistance,Traumatic Injury/Event,2018,0
+Health Care and Social Assistance,Subtotal,2018,1
+Arts and Recreation Services,Lung Disease,2018,1
+Arts and Recreation Services,Transport Accident,2018,0
+Arts and Recreation Services,Traumatic Injury/Event,2018,0
+Other Services,Lung Disease,2018,0
+Other Services,Medical Complications,2018,0
+Other Services,Suicide,2018,0
+Other Services,Transport Accident,2018,2
+Other Services,Traumatic Injury/Event,2018,0
+"Agriculture, Forestry and Fishing",Medical Complications,2019,0
+"Agriculture, Forestry and Fishing",Medical incl Heart/Stroke,2019,1
+"Agriculture, Forestry and Fishing",Other,2019,0
+"Agriculture, Forestry and Fishing",Transport Accident,2019,1
+"Agriculture, Forestry and Fishing",Traumatic Injury/Event,2019,7
+Mining,Lung Disease,2019,0
+Mining,Transport Accident,2019,0
+Manufacturing,Disease,2019,0
+Manufacturing,Lung Disease,2019,2
+Manufacturing,Medical Complications,2019,1
+Manufacturing,Medical incl Heart/Stroke,2019,3
+Manufacturing,Suicide,2019,0
+Manufacturing,Transport Accident,2019,3
+Manufacturing,Traumatic Injury/Event,2019,2
+"Electricity, Gas, Water and Waste Services",Disease,2019,0
+"Electricity, Gas, Water and Waste Services",Lung Disease,2019,0
+"Electricity, Gas, Water and Waste Services",Transport Accident,2019,1
+"Electricity, Gas, Water and Waste Services",Traumatic Injury/Event,2019,2
+Construction,Disease,2019,0
+Construction,Lung Disease,2019,3
+Construction,Medical Complications,2019,0
+Construction,Medical incl Heart/Stroke,2019,1
+Construction,Suicide,2019,0
+Construction,Transport Accident,2019,3
+Construction,Traumatic Injury/Event,2019,5
+Wholesale Trade,Asphyxia,2019,0
+Wholesale Trade,Disease,2019,0
+Wholesale Trade,Lung Disease,2019,1
+Wholesale Trade,Medical Complications,2019,1
+Wholesale Trade,Medical incl Heart/Stroke,2019,0
+Wholesale Trade,Suicide,2019,1
+Wholesale Trade,Transport Accident,2019,2
+Wholesale Trade,Traumatic Injury/Event,2019,2
+Retail Trade,Medical Complications,2019,1
+Retail Trade,Other,2019,0
+Retail Trade,Suicide,2019,1
+Retail Trade,Transport Accident,2019,0
+Retail Trade,Traumatic Injury/Event,2019,2
+Accommodation and Food Services,Criminal Offence,2019,0
+Accommodation and Food Services,Suicide,2019,0
+Accommodation and Food Services,Transport Accident,2019,0
+Accommodation and Food Services,Traumatic Injury/Event,2019,0
+"Transport, Postal and Warehousing",Disease,2019,0
+"Transport, Postal and Warehousing",Lung Disease,2019,0
+"Transport, Postal and Warehousing",Medical Complications,2019,1
+"Transport, Postal and Warehousing",Medical incl Heart/Stroke,2019,1
+"Transport, Postal and Warehousing",Other,2019,0
+"Transport, Postal and Warehousing",Suicide,2019,1
+"Transport, Postal and Warehousing",Transport Accident,2019,7
+"Transport, Postal and Warehousing",Traumatic Injury/Event,2019,0
+Information Media and Telecommunications,Medical Complications,2019,1
+Information Media and Telecommunications,Traumatic Injury/Event,2019,0
+Information Media and Telecommunications,Subtotal,2019,1
+"Rental, Hiring and Real Estate Services",Suicide,2019,0
+"Rental, Hiring and Real Estate Services",Traumatic Injury/Event,2019,0
+"Professional, Scientific and Technical Services",Asphyxia,2019,1
+"Professional, Scientific and Technical Services",Medical Complications,2019,1
+"Professional, Scientific and Technical Services",Transport Accident,2019,0
+"Professional, Scientific and Technical Services",Traumatic Injury/Event,2019,0
+Administrative and Support Services,Lung Disease,2019,0
+Administrative and Support Services,Medical incl Heart/Stroke,2019,0
+Administrative and Support Services,Suicide,2019,0
+Administrative and Support Services,Transport Accident,2019,0
+Administrative and Support Services,Traumatic Injury/Event,2019,2
+Public Administration and Safety,Disease,2019,4
+Public Administration and Safety,Lung Disease,2019,1
+Public Administration and Safety,Medical Complications,2019,0
+Public Administration and Safety,Medical incl Heart/Stroke,2019,0
+Public Administration and Safety,Other,2019,0
+Public Administration and Safety,Suicide,2019,1
+Public Administration and Safety,Transport Accident,2019,0
+Public Administration and Safety,Traumatic Injury/Event,2019,2
+Education and Training,Lung Disease,2019,0
+Education and Training,Suicide,2019,0
+Education and Training,Transport Accident,2019,0
+Education and Training,Traumatic Injury/Event,2019,0
+Health Care and Social Assistance,Medical incl Heart/Stroke,2019,1
+Health Care and Social Assistance,Other,2019,0
+Health Care and Social Assistance,Suicide,2019,2
+Health Care and Social Assistance,Transport Accident,2019,0
+Health Care and Social Assistance,Traumatic Injury/Event,2019,0
+Health Care and Social Assistance,Subtotal,2019,3
+Arts and Recreation Services,Lung Disease,2019,0
+Arts and Recreation Services,Transport Accident,2019,1
+Arts and Recreation Services,Traumatic Injury/Event,2019,2
+Other Services,Lung Disease,2019,0
+Other Services,Medical Complications,2019,1
+Other Services,Suicide,2019,1
+Other Services,Transport Accident,2019,2
+Other Services,Traumatic Injury/Event,2019,1
+"Agriculture, Forestry and Fishing",Medical Complications,2020,0
+"Agriculture, Forestry and Fishing",Medical incl Heart/Stroke,2020,0
+"Agriculture, Forestry and Fishing",Other,2020,1
+"Agriculture, Forestry and Fishing",Transport Accident,2020,0
+"Agriculture, Forestry and Fishing",Traumatic Injury/Event,2020,8
+Mining,Lung Disease,2020,0
+Mining,Transport Accident,2020,0
+Manufacturing,Disease,2020,1
+Manufacturing,Lung Disease,2020,4
+Manufacturing,Medical Complications,2020,1
+Manufacturing,Medical incl Heart/Stroke,2020,1
+Manufacturing,Suicide,2020,0
+Manufacturing,Transport Accident,2020,1
+Manufacturing,Traumatic Injury/Event,2020,4
+"Electricity, Gas, Water and Waste Services",Disease,2020,1
+"Electricity, Gas, Water and Waste Services",Lung Disease,2020,0
+"Electricity, Gas, Water and Waste Services",Transport Accident,2020,1
+"Electricity, Gas, Water and Waste Services",Traumatic Injury/Event,2020,0
+Construction,Disease,2020,0
+Construction,Lung Disease,2020,0
+Construction,Medical Complications,2020,0
+Construction,Medical incl Heart/Stroke,2020,1
+Construction,Suicide,2020,1
+Construction,Transport Accident,2020,2
+Construction,Traumatic Injury/Event,2020,8
+Wholesale Trade,Asphyxia,2020,0
+Wholesale Trade,Disease,2020,1
+Wholesale Trade,Lung Disease,2020,0
+Wholesale Trade,Medical Complications,2020,0
+Wholesale Trade,Medical incl Heart/Stroke,2020,0
+Wholesale Trade,Suicide,2020,0
+Wholesale Trade,Transport Accident,2020,1
+Wholesale Trade,Traumatic Injury/Event,2020,2
+Retail Trade,Medical Complications,2020,0
+Retail Trade,Other,2020,1
+Retail Trade,Suicide,2020,0
+Retail Trade,Transport Accident,2020,1
+Retail Trade,Traumatic Injury/Event,2020,1
+Accommodation and Food Services,Criminal Offence,2020,0
+Accommodation and Food Services,Suicide,2020,0
+Accommodation and Food Services,Transport Accident,2020,0
+Accommodation and Food Services,Traumatic Injury/Event,2020,0
+"Transport, Postal and Warehousing",Disease,2020,0
+"Transport, Postal and Warehousing",Lung Disease,2020,0
+"Transport, Postal and Warehousing",Medical Complications,2020,0
+"Transport, Postal and Warehousing",Medical incl Heart/Stroke,2020,2
+"Transport, Postal and Warehousing",Other,2020,0
+"Transport, Postal and Warehousing",Suicide,2020,0
+"Transport, Postal and Warehousing",Transport Accident,2020,9
+"Transport, Postal and Warehousing",Traumatic Injury/Event,2020,2
+Information Media and Telecommunications,Medical Complications,2020,0
+Information Media and Telecommunications,Traumatic Injury/Event,2020,0
+Information Media and Telecommunications,Subtotal,2020,0
+"Rental, Hiring and Real Estate Services",Suicide,2020,0
+"Rental, Hiring and Real Estate Services",Traumatic Injury/Event,2020,0
+"Professional, Scientific and Technical Services",Asphyxia,2020,0
+"Professional, Scientific and Technical Services",Medical Complications,2020,0
+"Professional, Scientific and Technical Services",Transport Accident,2020,0
+"Professional, Scientific and Technical Services",Traumatic Injury/Event,2020,2
+Administrative and Support Services,Lung Disease,2020,0
+Administrative and Support Services,Medical incl Heart/Stroke,2020,1
+Administrative and Support Services,Suicide,2020,0
+Administrative and Support Services,Transport Accident,2020,0
+Administrative and Support Services,Traumatic Injury/Event,2020,1
+Public Administration and Safety,Disease,2020,4
+Public Administration and Safety,Lung Disease,2020,4
+Public Administration and Safety,Medical Complications,2020,1
+Public Administration and Safety,Medical incl Heart/Stroke,2020,0
+Public Administration and Safety,Other,2020,0
+Public Administration and Safety,Suicide,2020,0
+Public Administration and Safety,Transport Accident,2020,5
+Public Administration and Safety,Traumatic Injury/Event,2020,2
+Education and Training,Lung Disease,2020,1
+Education and Training,Suicide,2020,2
+Education and Training,Transport Accident,2020,1
+Education and Training,Traumatic Injury/Event,2020,1
+Health Care and Social Assistance,Medical incl Heart/Stroke,2020,0
+Health Care and Social Assistance,Other,2020,0
+Health Care and Social Assistance,Suicide,2020,0
+Health Care and Social Assistance,Transport Accident,2020,0
+Health Care and Social Assistance,Traumatic Injury/Event,2020,0
+Health Care and Social Assistance,Subtotal,2020,0
+Arts and Recreation Services,Lung Disease,2020,0
+Arts and Recreation Services,Transport Accident,2020,0
+Arts and Recreation Services,Traumatic Injury/Event,2020,1
+Other Services,Lung Disease,2020,0
+Other Services,Medical Complications,2020,0
+Other Services,Suicide,2020,0
+Other Services,Transport Accident,2020,0
+Other Services,Traumatic Injury/Event,2020,0
+"Agriculture, Forestry and Fishing",Medical Complications,2021,1
+"Agriculture, Forestry and Fishing",Medical incl Heart/Stroke,2021,0
+"Agriculture, Forestry and Fishing",Other,2021,0
+"Agriculture, Forestry and Fishing",Transport Accident,2021,0
+"Agriculture, Forestry and Fishing",Traumatic Injury/Event,2021,8
+Mining,Lung Disease,2021,1
+Mining,Transport Accident,2021,0
+Manufacturing,Disease,2021,0
+Manufacturing,Lung Disease,2021,6
+Manufacturing,Medical Complications,2021,1
+Manufacturing,Medical incl Heart/Stroke,2021,1
+Manufacturing,Suicide,2021,0
+Manufacturing,Transport Accident,2021,0
+Manufacturing,Traumatic Injury/Event,2021,7
+"Electricity, Gas, Water and Waste Services",Disease,2021,0
+"Electricity, Gas, Water and Waste Services",Lung Disease,2021,0
+"Electricity, Gas, Water and Waste Services",Transport Accident,2021,0
+"Electricity, Gas, Water and Waste Services",Traumatic Injury/Event,2021,0
+Construction,Disease,2021,0
+Construction,Lung Disease,2021,4
+Construction,Medical Complications,2021,3
+Construction,Medical incl Heart/Stroke,2021,1
+Construction,Suicide,2021,0
+Construction,Transport Accident,2021,1
+Construction,Traumatic Injury/Event,2021,7
+Wholesale Trade,Asphyxia,2021,0
+Wholesale Trade,Disease,2021,0
+Wholesale Trade,Lung Disease,2021,1
+Wholesale Trade,Medical Complications,2021,0
+Wholesale Trade,Medical incl Heart/Stroke,2021,0
+Wholesale Trade,Suicide,2021,0
+Wholesale Trade,Transport Accident,2021,0
+Wholesale Trade,Traumatic Injury/Event,2021,2
+Retail Trade,Medical Complications,2021,0
+Retail Trade,Other,2021,0
+Retail Trade,Suicide,2021,0
+Retail Trade,Transport Accident,2021,0
+Retail Trade,Traumatic Injury/Event,2021,1
+Accommodation and Food Services,Criminal Offence,2021,0
+Accommodation and Food Services,Suicide,2021,1
+Accommodation and Food Services,Transport Accident,2021,0
+Accommodation and Food Services,Traumatic Injury/Event,2021,1
+"Transport, Postal and Warehousing",Disease,2021,0
+"Transport, Postal and Warehousing",Lung Disease,2021,0
+"Transport, Postal and Warehousing",Medical Complications,2021,1
+"Transport, Postal and Warehousing",Medical incl Heart/Stroke,2021,1
+"Transport, Postal and Warehousing",Other,2021,1
+"Transport, Postal and Warehousing",Suicide,2021,0
+"Transport, Postal and Warehousing",Transport Accident,2021,3
+"Transport, Postal and Warehousing",Traumatic Injury/Event,2021,4
+Information Media and Telecommunications,Medical Complications,2021,0
+Information Media and Telecommunications,Traumatic Injury/Event,2021,0
+Information Media and Telecommunications,Subtotal,2021,0
+"Rental, Hiring and Real Estate Services",Suicide,2021,0
+"Rental, Hiring and Real Estate Services",Traumatic Injury/Event,2021,1
+"Professional, Scientific and Technical Services",Asphyxia,2021,0
+"Professional, Scientific and Technical Services",Medical Complications,2021,0
+"Professional, Scientific and Technical Services",Transport Accident,2021,1
+"Professional, Scientific and Technical Services",Traumatic Injury/Event,2021,0
+Administrative and Support Services,Lung Disease,2021,2
+Administrative and Support Services,Medical incl Heart/Stroke,2021,0
+Administrative and Support Services,Suicide,2021,1
+Administrative and Support Services,Transport Accident,2021,0
+Administrative and Support Services,Traumatic Injury/Event,2021,2
+Public Administration and Safety,Disease,2021,4
+Public Administration and Safety,Lung Disease,2021,1
+Public Administration and Safety,Medical Complications,2021,2
+Public Administration and Safety,Medical incl Heart/Stroke,2021,1
+Public Administration and Safety,Other,2021,1
+Public Administration and Safety,Suicide,2021,0
+Public Administration and Safety,Transport Accident,2021,0
+Public Administration and Safety,Traumatic Injury/Event,2021,2
+Education and Training,Lung Disease,2021,0
+Education and Training,Suicide,2021,0
+Education and Training,Transport Accident,2021,0
+Education and Training,Traumatic Injury/Event,2021,0
+Health Care and Social Assistance,Medical incl Heart/Stroke,2021,1
+Health Care and Social Assistance,Other,2021,0
+Health Care and Social Assistance,Suicide,2021,1
+Health Care and Social Assistance,Transport Accident,2021,0
+Health Care and Social Assistance,Traumatic Injury/Event,2021,0
+Health Care and Social Assistance,Subtotal,2021,2
+Arts and Recreation Services,Lung Disease,2021,0
+Arts and Recreation Services,Transport Accident,2021,0
+Arts and Recreation Services,Traumatic Injury/Event,2021,0
+Other Services,Lung Disease,2021,1
+Other Services,Medical Complications,2021,0
+Other Services,Suicide,2021,0
+Other Services,Transport Accident,2021,1
+Other Services,Traumatic Injury/Event,2021,2
+"Agriculture, Forestry and Fishing",Medical Complications,2022,0
+"Agriculture, Forestry and Fishing",Medical incl Heart/Stroke,2022,0
+"Agriculture, Forestry and Fishing",Other,2022,0
+"Agriculture, Forestry and Fishing",Transport Accident,2022,1
+"Agriculture, Forestry and Fishing",Traumatic Injury/Event,2022,7
+Mining,Lung Disease,2022,0
+Mining,Transport Accident,2022,2
+Manufacturing,Disease,2022,1
+Manufacturing,Lung Disease,2022,1
+Manufacturing,Medical Complications,2022,1
+Manufacturing,Medical incl Heart/Stroke,2022,1
+Manufacturing,Suicide,2022,1
+Manufacturing,Transport Accident,2022,0
+Manufacturing,Traumatic Injury/Event,2022,3
+"Electricity, Gas, Water and Waste Services",Disease,2022,0
+"Electricity, Gas, Water and Waste Services",Lung Disease,2022,1
+"Electricity, Gas, Water and Waste Services",Transport Accident,2022,1
+"Electricity, Gas, Water and Waste Services",Traumatic Injury/Event,2022,0
+Construction,Disease,2022,2
+Construction,Lung Disease,2022,1
+Construction,Medical Complications,2022,0
+Construction,Medical incl Heart/Stroke,2022,1
+Construction,Suicide,2022,0
+Construction,Transport Accident,2022,0
+Construction,Traumatic Injury/Event,2022,5
+Wholesale Trade,Asphyxia,2022,0
+Wholesale Trade,Disease,2022,0
+Wholesale Trade,Lung Disease,2022,0
+Wholesale Trade,Medical Complications,2022,0
+Wholesale Trade,Medical incl Heart/Stroke,2022,1
+Wholesale Trade,Suicide,2022,0
+Wholesale Trade,Transport Accident,2022,0
+Wholesale Trade,Traumatic Injury/Event,2022,1
+Retail Trade,Medical Complications,2022,1
+Retail Trade,Other,2022,0
+Retail Trade,Suicide,2022,0
+Retail Trade,Transport Accident,2022,1
+Retail Trade,Traumatic Injury/Event,2022,1
+Accommodation and Food Services,Criminal Offence,2022,0
+Accommodation and Food Services,Suicide,2022,0
+Accommodation and Food Services,Transport Accident,2022,1
+Accommodation and Food Services,Traumatic Injury/Event,2022,0
+"Transport, Postal and Warehousing",Disease,2022,1
+"Transport, Postal and Warehousing",Lung Disease,2022,1
+"Transport, Postal and Warehousing",Medical Complications,2022,1
+"Transport, Postal and Warehousing",Medical incl Heart/Stroke,2022,0
+"Transport, Postal and Warehousing",Other,2022,0
+"Transport, Postal and Warehousing",Suicide,2022,0
+"Transport, Postal and Warehousing",Transport Accident,2022,7
+"Transport, Postal and Warehousing",Traumatic Injury/Event,2022,5
+Information Media and Telecommunications,Medical Complications,2022,0
+Information Media and Telecommunications,Traumatic Injury/Event,2022,0
+Information Media and Telecommunications,Subtotal,2022,0
+"Rental, Hiring and Real Estate Services",Suicide,2022,0
+"Rental, Hiring and Real Estate Services",Traumatic Injury/Event,2022,0
+"Professional, Scientific and Technical Services",Asphyxia,2022,0
+"Professional, Scientific and Technical Services",Medical Complications,2022,0
+"Professional, Scientific and Technical Services",Transport Accident,2022,0
+"Professional, Scientific and Technical Services",Traumatic Injury/Event,2022,0
+Administrative and Support Services,Lung Disease,2022,0
+Administrative and Support Services,Medical incl Heart/Stroke,2022,0
+Administrative and Support Services,Suicide,2022,0
+Administrative and Support Services,Transport Accident,2022,1
+Administrative and Support Services,Traumatic Injury/Event,2022,0
+Public Administration and Safety,Disease,2022,4
+Public Administration and Safety,Lung Disease,2022,1
+Public Administration and Safety,Medical Complications,2022,0
+Public Administration and Safety,Medical incl Heart/Stroke,2022,0
+Public Administration and Safety,Other,2022,0
+Public Administration and Safety,Suicide,2022,1
+Public Administration and Safety,Transport Accident,2022,1
+Public Administration and Safety,Traumatic Injury/Event,2022,1
+Education and Training,Lung Disease,2022,0
+Education and Training,Suicide,2022,0
+Education and Training,Transport Accident,2022,0
+Education and Training,Traumatic Injury/Event,2022,1
+Health Care and Social Assistance,Medical incl Heart/Stroke,2022,0
+Health Care and Social Assistance,Other,2022,1
+Health Care and Social Assistance,Suicide,2022,0
+Health Care and Social Assistance,Transport Accident,2022,2
+Health Care and Social Assistance,Traumatic Injury/Event,2022,1
+Health Care and Social Assistance,Subtotal,2022,4
+Arts and Recreation Services,Lung Disease,2022,0
+Arts and Recreation Services,Transport Accident,2022,0
+Arts and Recreation Services,Traumatic Injury/Event,2022,0
+Other Services,Lung Disease,2022,1
+Other Services,Medical Complications,2022,0
+Other Services,Suicide,2022,0
+Other Services,Transport Accident,2022,0
+Other Services,Traumatic Injury/Event,2022,1
