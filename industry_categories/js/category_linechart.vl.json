@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "background": "lightgrey",
-  "description": "A scatterplot showing body mass and flipper lengths of penguins.",
   "data": {
     "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_industry_category.csv"
   },
@@ -10,37 +9,32 @@
       "name": "category_fltr",
       "bind": {
         "input": "select",
-        "options": [
-          null,
-          "Asphyxia",
-          "Criminal Offence",
-          "Disease",
-          "Lung Disease",
-          "Medical Complications",
-          "Medical incl Heart/Stroke",
-          "Suicide",
-          "Transport Accident",
-          "Traumatic Injury/Event",
-          "Other"
-        ],
+        "options": [null, "Asphyxia", "Criminal Offence", "Disease", "Lung Disease", "Medical Complications", "Medical incl Heart/Stroke", "Suicide", "Transport Accident", "Traumatic Injury/Event", "Other"],
         "labels": ["Show All"],
         "name": "Category Filter:"
       }
+    },
+    {
+      "name": "category",
+      "select": {"type": "point", "fields": ["Category"]},
+      "bind": "legend"
     }
   ],
-  "width": 300,
-  "height": 350,
-  "mark": {"type": "line", "point": true},
+  "width": "container",
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "point": {
+      "size": 55
+    }
+  },
   "transform": [
     {"filter": " category_fltr == null || datum.Category == category_fltr"},
     {"filter": "datum.Year !== null"}
   ],
   "encoding": {
     "x": {
-      "field": "Year",
-      "timeUnit": "year",
-      "type": "nominal",
-      "title": null,
+      "field": "Year", "timeUnit": "year", "type": "nominal", "title": null,
       "scale": {"zero": false}
     },
     "y": {
@@ -50,11 +44,24 @@
       "title": "Total Fatalities",
       "scale": {"zero": false}
     },
-    "color": {"field": "Category", "type": "nominal"},
+    "color": {"field": "Category",
+      "type": "nominal", "scale": {"range": ["#03071E", "#49081F", "#6A040F", "#9D0208", "#D00000", "#DC2F02", "#E85D04", "#F48C06", "#FAA307", "#FFBA08"]},
+      "legend": {
+        "orient": "bottom",
+        "columns": 5
+      }},
+    "opacity": {
+      "condition": {"param": "category", "value": 1},
+      "value": 0.2
+    },
     "tooltip": [
-      {"field": "Year", "timeUnit": "year", "title": "Year"},
       {
-        "field": "Work-Related Fatality Category",
+        "field": "Year", 
+        "timeUnit": "year", 
+        "title": "Year"
+      },
+      {
+        "field": "Category",
         "type": "nominal",
         "title": "Category"
       },
@@ -65,6 +72,5 @@
         "title": "Fatalities"
       }
     ]
-  },
-  "config": {}
+  }
 }

@@ -20,7 +20,7 @@
       "y": {
         "field": "Industry",
         "type": "nominal",
-        "axis": {"grid": false}
+        "axis": {"orient": "right", "grid": false, "title": null, "labelAlign": "left"}
       },
       "x": {"field": "Year", "timeUnit": "year", "type": "nominal", "title": null},
       "size": {
@@ -28,7 +28,7 @@
         "field": "Fatalities",
         "type": "quantitative",
         "title": "Total Fatalities",
-        "legend": {"clipHeight": 30},
+        "legend": {"orient": "left", "clipHeight": 30},
         "scale": {"rangeMax": 700}
       },
       "tooltip": [

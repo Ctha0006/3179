@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "lightgrey",
+  "title": "Category of Fatalities Percentages",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_industry_category.csv"
+  },
+  "width": "container",
+  "mark": {"type": "arc", "tooltip": true},
+  "transform": [{"filter": "datum.Category !== ''"}],
+  "encoding": {
+    "theta": {
+      "aggregate": "sum",
+      "field": "Fatalities",
+      "type": "quantitative",
+      "stack": "normalize"
+    },
+    "color": {
+      "field": "Category",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#03071E",
+          "#49081F",
+          "#6A040F",
+          "#9D0208",
+          "#D00000",
+          "#DC2F02",
+          "#E85D04",
+          "#F48C06",
+          "#FAA307",
+          "#FFBA08"
+        ]
+      },
+      "legend": null      
+    }
+  },
+  "config": {}
+}

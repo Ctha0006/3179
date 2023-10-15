@@ -30,15 +30,13 @@
           <h1>Victoria Work-related fatalities</h1>
           <p style="text-align: center;">
             WorkSafe is Victoria's workplace health and safety regulator. <br>
-            The following visualisation presents confirmed work-related <br>
-            fatalities from Jan 2018 - Dec 2022 as provided by WorkSafe Victoria.
+            The following visualisation presents confirmed work-related fatalities <br>
+            from Jan 2018 - Dec 2022 as provided by WorkSafe Victoria.
           </p>
         </div>
       </div>
       <!-- end pure grid group -->
       
-      
-
       <!-- pure grid group -->
       <div class="pure-g">
         <div class="pure-u-1-1">
@@ -47,11 +45,23 @@
         <div class="pure-u-1-3">
           <div class="description description-left">
             <p>
-              Use the brushing selection interaction on the years graphs to filter the month graph.<br>
+              A work-related fatality is defined as any of the following:	
               <br>
-              The first and second columns are combined. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-              faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+              1. the death of any person where the death occurs: at a workplace or	
+              arising from the conduct of the undertaking of an employer/manager;
+              and where the person was owed a duty under the Occupational Health and Safety Act 2004 by an employer or management
+              <br>2. the death of a worker, within the meaning of the Workplace Injury Rehabilitation and Compensation Act 2013 (WIRC Act)
+              <br>3. the death of an employer or self-employed person
+              <br> which WorkSafe Victoria has been notified.
+              <br><br>There were 66 recorded worker fatalities in 2022. This is the lowest of recorded in 3 years. 
+              There has generally been no change in the number of recorded fatalities each year apart from 
+              an increase of 27 fatalities from 2018 to 2019. The highest number of work-related injury 
+              fatalities in a month was 12 fatalities in April 2019 and March of 2021. 
+              <br><br>
+              In 2022, the average fatalities slightly decreased from a previous 6.75 to 5.5 fatalities per 
+              month. 2018 had the smallest average of 4.4. This may be due to missing data or not all 
+              fatalities being recorded.
+            </p>
           </div>
         </div>
         <div class="pure-u-2-3">
@@ -59,32 +69,93 @@
         </div>    
       </div>
       <!-- end pure grid group -->
-  
+
       <!-- pure grid group -->
       <div class="pure-g">
         <div class="pure-u-1-1">
-          <h2>Fatalities by Local Government Areas (LGA)</h2>
-          <div id="lga_map" class="vis-container"></div>
+          <h2>Work-Related Fatality Categories</h2>
         </div>
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <p>The first column contains text and the second column contains a visualisation.
-              Lorem ipsum dolor sit amet, conseceiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-              sed. Egestas purus viverra accumsan in n</p>
+            <p>Lives lost in Victorian workplaces recorded by <b>WorkSafe Victoria</b> previously excluded 
+              some work-related deaths that were not attributable to obligations under the 
+              Occupational Health and Safety Act 2004, such as those caused by transport accidents or 
+              occupational diseases.
+              <br><br>
+              From July 2020 this was changed and workers who die on the road, suicides attributable to work, 
+              industrial diseases such as silicosis, and workplace deaths resulting from a criminal act, are 
+              included.
+            </p>
           </div>
+          <div id="categorypie" class="vis-container"></div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="category" class="vis-container"></div>
         </div>
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <p>The first column contains text and the second column contains a visualisation.
-              Lorem ipsum dolor sit amet, conseceiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-              sed. Egestas purus viverra accumsan in n</p>
+            <p><b>Traumatic Injury/Events</b> was the biggest category of fatalities at 41%.
+              <br><br>
+              The second largest category was <b>Transport Accident</b> (20%).</p>
           </div>
         </div>
-        <div class="pure-u-1-3" style="width: 31.5%;">
+        <div class="pure-u-1-3">
+          <div class="description">
+            <p>
+              <b>Asphyxia (death by suffocation), Criminal Offence</b>, and <b>Other</b> categories were the 
+              smallest recorded fatalities, totaling 2%. Suicide has gradually decreased over the years.
+            </p>
+          </div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <p>
+              Fatalities due to <b>Lung Disease</b> was increasing from 2018 to 2021 however has decreased in 2022.
+              <b>Medical Complications</b> and <b>Medical incl Heart/Stroke</b> did not have much change over the years.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <h2>Work Industries</h2>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="industry_bubble" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div id="industry_bar" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
           <div class="description description-left">
-            <p>The first column contains text and the second column contains a visualisation.
-              Lorem ipsum dolor sit amet, conseceiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-              sed. Egestas purus viverra accumsan in n</p>
+            <p>
+              Over the years, the majority (17%) of fatalities occurred in <b>Construction</b> (126 fatalities). 
+              <b>Transport, postal and warehousing</b> (106 fatalities) accounted for 15% of fatalities. This 
+              was followed by <b>Manufacturing</b> (104 fatalities; 14%) and <b>Public Administration and Safety</b> 
+              (98 fatalities; 14%).
+            </p>
+          </div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description">
+            <p>
+              It is interesting to note that these 4 industries mentioned had fatalities every year from 2018 to 
+              2022, in addition to <b>Agriculture, Forestry and Fishing</b> and <b>Wholesale Trade</b> which had 
+              the next highest total fatalities. Their top 4 heirachy over the years varied slightly amongs the 
+              4 majority mentioned. 
+            </p>
+          </div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <p>
+              It is understandable to see more fatalities in such industries in comparison to 
+              <b>Information Media and Telecommunications</b> or <b>Rental, Hiring and Real Estate Services</b>
+              which are not physical labour. Mining did not have any recorded fatalities until 2021.
+            </p>
           </div>
         </div>
       </div>
@@ -100,61 +171,54 @@
         </div>
         <div class="pure-u-1-3">
           <div class="description description-right">            
-            <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-              faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+            <p>From 2018 - 2022, <b>92%</b> of workers killed were <b>Male</b>. The data shows from the sum of fatalities 
+              from 2018-2022, that workers aged <b>55 to 64 years</b> had significantly higher number of fatalities 
+              at 83, followed by workers aged <b>45 to 54 years</b> at 61 fatalities. The sum was consistent with
+              male fatality trends however it is noticed that the female fatalities did not have 
+              significantly high numbers. The highest number of fatalities for <b>Females</b> was 7 people for 
+              workers aged <b>35 to 44</b>.</p>
           </div>
         </div>
-      </div>
-      <!-- end pure grid group -->
-
-      <!-- pure grid group -->
-      <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>Categories</h2>
-            <p>Lives lost in Victorian workplace have been recorded by WorkSafe Victoria whcih previously excluded some work-related deaths 
-              that were not attributable to duties or obligations under the Occupational Health and Safety Act 2004, such as those caused by 
-              transport accidents or occupational diseases.
-      
-              Now workers who die on the road, suicides attributable to work, industrial diseases such as silicosis, and workplace deaths 
-              resulting from a criminal act, are included.
-              
-              We implemented this change for reporting for the 2020-21 financial year, commencing 1 July 2020.</p>
-          </div>
-        </div>
-        <div class="pure-u-2-3">
-          <div id="industry" class="vis-container"></div>
-        </div>  
       </div>
       <!-- end pure grid group -->
 
       <!-- pure grid group -->
       <div class="pure-g">
         <div class="pure-u-1-1">
-          <h2>Work-Related Fatality Category</h2>
+          <h2>Fatalities by Local Government Areas (LGA)</h2>
+          <div id="lga_map" class="vis-container"></div>
         </div>
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <p>Lives lost in Victorian workplace have been recorded by WorkSafe Victoria whcih previously excluded some work-related deaths 
-              that were not attributable to duties or obligations under the Occupational Health and Safety Act 2004, such as those caused by 
-              transport accidents or occupational diseases.
-      
-              Now workers who die on the road, suicides attributable to work, industrial diseases such as silicosis, and workplace deaths 
-              resulting from a criminal act, are included.
-              
-              We implemented this change for reporting for the 2020-21 financial year, commencing 1 July 2020.</p>
+            <p>
+              The map is normalised by LGA population. While it is important to look at the normalised data, taking note 
+              of the number of fatalities is also important. Murrindindi Shire had the
+              highest Fatalities per 10,000 population
+            </p>
           </div>
         </div>
-        <div class="pure-u-2-3">
-          <div id="category" class="vis-container"></div>
-        </div>  
+        <div class="pure-u-1-3">
+          <div class="description">
+            <p>
+              of 4.95 (6 Total Fatalities). The City of Greater Dandenong has the highest number of total 
+              fatalities of 20 though their taio per 10,000 population was low at 1.54. Melbourne City had the
+            </p>
+          </div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <p>
+              second highest total fatalities (1.04 fatalities per 10,000). It is important to note Greater 
+              Dandenong and Melbourne have the third and fourth largest populations respectively.
+            </p>
+          </div>
+        </div>
       </div>
       <!-- end pure grid group -->
   
       <div class="pure-g">
         <div class="pure-u-1-1 small-font">
-          <p>This visualisation is created by <a href="https://github.com/Ctha0006/3179/" target="_blank">CTHA0006</a>. 
+          <p>This visualisation is created by <a href="https://github.com/Ctha0006/3179/" target="_blank">ctha0006</a>. 
             The datasource is from <a href="https://www.worksafe.vic.gov.au/resources/workplace-fatalities" target=" _blank">WorkSafe Victoria</href>.</p>
         </div>
       </div>
@@ -176,11 +240,19 @@
       }).catch(console.error);
 
       var spec4 = "industry_categories/js/industry_bubbleplot.vl.json";
-      vegaEmbed('#industry', spec4, { "actions": false }).then(function(result) {
+      vegaEmbed('#industry_bubble', spec4, { "actions": false }).then(function(result) {
       }).catch(console.error);
 
-      var spec5 = "industry_categories/js/category_linechart.vl.json";
-      vegaEmbed('#category', spec5, { "actions": false }).then(function(result) {
+      var spec5 = "industry_categories/js/industry_barchart.vl.json";
+      vegaEmbed('#industry_bar', spec5, { "actions": false }).then(function(result) {
+      }).catch(console.error);
+
+      var spec6 = "industry_categories/js/category_linechart.vl.json";
+      vegaEmbed('#category', spec6, { "actions": false }).then(function(result) {
+      }).catch(console.error);
+
+      var spec7 = "industry_categories/js/category_piechart.vl.json";
+      vegaEmbed('#categorypie', spec7, { "actions": false }).then(function(result) {
       }).catch(console.error);
     </script>
 </body>

@@ -7,7 +7,7 @@
   "vconcat": [
     {
       "width": "container",
-      "height": 240,
+      "height": 325,
       "layer": [
         {
           "mark": {"type": "bar", "color": "#FFBA08"},
@@ -63,7 +63,7 @@
     {
       "title": "Use the brush selection interaction on the years graphs to filter the month graph.",
       "width": "container",
-      "height": 150,
+      "height": 175,
       "mark": {"type": "bar", "color": "#FFBA08"},
       "params": [
         {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}

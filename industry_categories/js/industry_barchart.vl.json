@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_industry_category.csv"
+  },
+  "background": "lightgrey",
+  "width": "container",
+  "height": 350,
+  "mark": {
+    "type": "bar",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1,
+    "color": "#D00000"
+  },
+  "transform": [{"filter": "datum.Year !== null"}],
+  "encoding": {
+    "y": {
+      "field": "Industry",
+      "type": "nominal",
+      "axis": {"labels": false, "title": null}
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "Fatalities",
+      "type": "quantitative",
+      "title": "Total Fatalities"
+    },
+    "tooltip": [
+      {"field": "Industry", "type": "nominal", "title": "Industry"},
+      {
+        "aggregate": "sum",
+        "field": "Fatalities",
+        "type": "quantitative",
+        "title": "Fatalities"
+      }
+    ]
+  },
+  "config": {}
+}
