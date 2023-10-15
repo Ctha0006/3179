@@ -3,13 +3,14 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_month_year.csv"
   },
+  "background": "lightgrey",
   "vconcat": [
     {
       "width": "container",
       "height": 240,
       "layer": [
         {
-          "mark": {"type": "bar", "color": "#fbcb5c"},
+          "mark": {"type": "bar", "color": "#FFBA08"},
           "encoding": {
             "x": {
               "timeUnit": "yearmonth",
@@ -36,13 +37,16 @@
         {
           "mark": {
             "type": "text",
+            "font": "monospace",
+            "fontSize": 12.5,
             "align": "center",
-            "dx": -195,
+            "dx": -175,
             "dy": -100,
-            "baseline": "middle"          },
+            "baseline": "middle"
+          },
           "transform": [
             {
-              "calculate": "'Dec 2018 and Jan 2021; had no recorded fatalities'",
+              "calculate": "'Dec 2018 and Jan 2021 had; no recorded fatalities'",
               "as": "text_annotation_raw"
             },
             {
@@ -57,6 +61,7 @@
       ]
     },
     {
+      "title": "Use the brush selection interaction on the years graphs to filter the month graph.",
       "width": "container",
       "height": 150,
       "mark": {"type": "bar", "color": "#FFBA08"},

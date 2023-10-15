@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "lightgrey",
+  "description": "A scatterplot showing body mass and flipper lengths of penguins.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_industry_category.csv"
+  },
+  "params": [
+    {
+      "name": "category_fltr",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Asphyxia",
+          "Criminal Offence",
+          "Disease",
+          "Lung Disease",
+          "Medical Complications",
+          "Medical incl Heart/Stroke",
+          "Suicide",
+          "Transport Accident",
+          "Traumatic Injury/Event",
+          "Other"
+        ],
+        "labels": ["Show All"],
+        "name": "Category Filter:"
+      }
+    }
+  ],
+  "width": 300,
+  "height": 350,
+  "mark": {"type": "line", "point": true},
+  "transform": [
+    {"filter": " category_fltr == null || datum.Category == category_fltr"},
+    {"filter": "datum.Year !== null"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "timeUnit": "year",
+      "type": "nominal",
+      "title": null,
+      "scale": {"zero": false}
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Fatalities",
+      "type": "quantitative",
+      "title": "Total Fatalities",
+      "scale": {"zero": false}
+    },
+    "color": {"field": "Category", "type": "nominal"},
+    "tooltip": [
+      {"field": "Year", "timeUnit": "year", "title": "Year"},
+      {
+        "field": "Work-Related Fatality Category",
+        "type": "nominal",
+        "title": "Category"
+      },
+      {
+        "aggregate": "sum",
+        "field": "Fatalities",
+        "type": "quantitative",
+        "title": "Fatalities"
+      }
+    ]
+  },
+  "config": {}
+}

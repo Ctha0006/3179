@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Victoria Workplace Fatalities 2018-2022",
+  "background": "lightgrey",
   "width": "container",
   "height": 400,
   "params": [
@@ -74,7 +75,7 @@
       "scale": {"type": "log", "range": ["#fbcb5c", "#9D0208"]},
       "legend": {
         "orient": "bottom-left",
-        "fillColor": "white",
+        "fillColor": "lightgrey",
         "values": [0, 4],
         "gradientLength": 200,
         "padding": 5
