@@ -6,34 +6,77 @@
     "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_industry_category.csv"
   },
   "width": "container",
-  "mark": {"type": "arc", "tooltip": true},
-  "transform": [{"filter": "datum.Category !== ''"}],
-  "encoding": {
-    "theta": {
-      "aggregate": "sum",
-      "field": "Fatalities",
-      "type": "quantitative",
-      "stack": "normalize"
+  "layer":[
+    {
+      "mark": {"type": "arc", "tooltip": true},
+      "transform": [{"filter": "datum.Category !== ''"}],
+      "encoding": {
+        "theta": {
+          "aggregate": "sum",
+          "field": "Fatalities",
+          "type": "quantitative",
+          "stack": "normalize"
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "scale": {
+            "range": [
+              "#03071E",
+              "#49081F",
+              "#6A040F",
+              "#9D0208",
+              "#D00000",
+              "#DC2F02",
+              "#E85D04",
+              "#F48C06",
+              "#FAA307",
+              "#FFBA08"
+            ]
+          },
+          "legend": null      
+        }
+      }
     },
-    "color": {
-      "field": "Category",
-      "type": "nominal",
-      "scale": {
-        "range": [
-          "#03071E",
-          "#49081F",
-          "#6A040F",
-          "#9D0208",
-          "#D00000",
-          "#DC2F02",
-          "#E85D04",
-          "#F48C06",
-          "#FAA307",
-          "#FFBA08"
-        ]
+    {
+      "mark": {
+        "type": "text",
+        "font": "monospace",
+        "fontSize": 12.5,
+        "align": "center",
+        "dx": -100,
+        "dy": -50,
+        "baseline": "middle"
       },
-      "legend": null      
+      "transform": [
+        {
+          "calculate": "'41%'",
+          "as": "text_annotation"
+        }
+      ],
+      "encoding": {
+        "text": {"field": "text_annotation"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "font": "monospace",
+        "fontSize": 12.5,
+        "align": "center",
+        "dy": 55,
+        "baseline": "middle"
+      },
+      "transform": [
+        {
+          "calculate": "'20%'",
+          "as": "text_annotation"
+        }
+      ],
+      "encoding": {
+        "text": {"field": "text_annotation"}
+      }
     }
-  },
+  ],
   "config": {}
 }

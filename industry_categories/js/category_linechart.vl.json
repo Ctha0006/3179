@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Age Groups and Gender",
   "background": "lightgrey",
+  "width": "container",
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Ctha0006/3179/main/data/fatalities_industry_category.csv"
   },
@@ -13,64 +16,95 @@
         "labels": ["Show All"],
         "name": "Category Filter:"
       }
+    }
+  ],
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "category",
+          "select": {"type": "point", "fields": ["Category"]},
+          "bind": "legend"
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "point": {
+          "size": 75
+        }
+      },
+      "transform": [
+        {"filter": " category_fltr == null || datum.Category == category_fltr"},
+        {"filter": "datum.Year !== null"}
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year", "timeUnit": "year", "type": "nominal", "title": null,
+          "scale": {"zero": false}
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "Fatalities",
+          "type": "quantitative",
+          "title": "Total Fatalities",
+          "scale": {"zero": false}
+        },
+        "color": {"field": "Category",
+          "type": "nominal", "scale": {"range": ["#03071E", "#49081F", "#6A040F", "#9D0208", "#D00000", "#DC2F02", "#E85D04", "#F48C06", "#FAA307", "#FFBA08"]},
+          "legend": {
+            "orient": "bottom",
+            "columns": 5
+          }
+        },
+        "opacity": {
+          "condition": {"param": "category", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {
+            "field": "Year", 
+            "timeUnit": "year", 
+            "title": "Year"
+          },
+          {
+            "field": "Category",
+            "type": "nominal",
+            "title": "Category"
+          },
+          {
+            "aggregate": "sum",
+            "field": "Fatalities",
+            "type": "quantitative",
+            "title": "Fatalities"
+          }
+        ]
+      }
     },
     {
-      "name": "category",
-      "select": {"type": "point", "fields": ["Category"]},
-      "bind": "legend"
-    }
-  ],
-  "width": "container",
-  "height": 400,
-  "mark": {
-    "type": "line",
-    "point": {
-      "size": 55
-    }
-  },
-  "transform": [
-    {"filter": " category_fltr == null || datum.Category == category_fltr"},
-    {"filter": "datum.Year !== null"}
-  ],
-  "encoding": {
-    "x": {
-      "field": "Year", "timeUnit": "year", "type": "nominal", "title": null,
-      "scale": {"zero": false}
-    },
-    "y": {
-      "aggregate": "sum",
-      "field": "Fatalities",
-      "type": "quantitative",
-      "title": "Total Fatalities",
-      "scale": {"zero": false}
-    },
-    "color": {"field": "Category",
-      "type": "nominal", "scale": {"range": ["#03071E", "#49081F", "#6A040F", "#9D0208", "#D00000", "#DC2F02", "#E85D04", "#F48C06", "#FAA307", "#FFBA08"]},
-      "legend": {
-        "orient": "bottom",
-        "columns": 5
-      }},
-    "opacity": {
-      "condition": {"param": "category", "value": 1},
-      "value": 0.2
-    },
-    "tooltip": [
-      {
-        "field": "Year", 
-        "timeUnit": "year", 
-        "title": "Year"
+      "mark": {
+        "type": "text",
+        "font": "monospace",
+        "fontSize": 12.5,
+        "color": "#383838",
+        "align": "center",
+        "dx": -115,
+        "dy": -140,
+        "baseline": "middle"
       },
-      {
-        "field": "Category",
-        "type": "nominal",
-        "title": "Category"
-      },
-      {
-        "aggregate": "sum",
-        "field": "Fatalities",
-        "type": "quantitative",
-        "title": "Fatalities"
+      "transform": [
+        {
+          "calculate": "'Traumatic Injury/Events; account for 41% of all; recorded fatalities.'",
+          "as": "text_annotation_raw"
+        },
+        {
+          "calculate": "split(datum.text_annotation_raw, ';')",
+          "as": "text_annotation"
+        }
+      ],
+      "encoding": {
+        "text": {"field": "text_annotation"}
       }
-    ]
-  }
+    }
+  ],
+  "config": {}
 }
