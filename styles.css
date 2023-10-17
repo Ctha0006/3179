@@ -23,7 +23,7 @@ body {
 
 .page {
     width: 900px;
-    background-color: white;
+    background-color: darkgray;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
@@ -51,6 +51,7 @@ h1 {
     margin-bottom: 40px;
     background-color: lightgray;
     padding: 25px;
+    border-radius: 20px;
 }
 
 .small-font {
