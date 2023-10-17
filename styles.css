@@ -18,12 +18,12 @@ p {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: lightgray;
+    background-color: rgb(244, 186, 186);
 }
 
 .page {
     width: 900px;
-    background-color: darkgray;
+    background-color: rgb(244, 186, 186);
     margin: auto;
     padding: 50px;
     padding-top: 35px;
